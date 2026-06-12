@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" font-family="Archivo, Arial, sans-serif">
+  <defs>
+    <filter id="grain2">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" result="n"/>
+      <feColorMatrix in="n" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.05 0" result="g"/>
+      <feComposite in="g" in2="SourceGraphic" operator="over"/>
+    </filter>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="3.4" fill="#0f0f10"/>
+    </pattern>
+  </defs>
+  <g filter="url(#grain2)">
+    <rect width="800" height="1000" fill="#2b50ff"/>
+    <!-- Cadre de visée -->
+    <g stroke="#faf6ee" stroke-width="6" fill="none">
+      <path d="M120 150 h70 M120 150 v70"/>
+      <path d="M680 150 h-70 M680 150 v70"/>
+      <path d="M120 620 h70 M120 620 v-70"/>
+      <path d="M680 620 h-70 M680 620 v-70"/>
+    </g>
+    <!-- Demi-cercle halftone qui sort du champ -->
+    <circle cx="800" cy="385" r="240" fill="url(#dots)"/>
+    <circle cx="800" cy="385" r="240" fill="none" stroke="#faf6ee" stroke-width="6"/>
+    <!-- Bandes typographiques inclinées -->
+    <g font-size="92" font-weight="800" letter-spacing="-3">
+      <text x="90" y="330" fill="#faf6ee">HORS—</text>
+      <text x="90" y="430" fill="#0f0f10">CHAMP</text>
+      <text x="90" y="530" fill="#faf6ee" opacity="0.45">FESTIVAL</text>
+    </g>
+    <!-- Pellicule -->
+    <g fill="#0f0f10">
+      <rect x="0" y="700" width="800" height="150"/>
+    </g>
+    <g fill="#2b50ff">
+      <rect x="30" y="722" width="46" height="30" rx="6"/>
+      <rect x="106" y="722" width="46" height="30" rx="6"/>
+      <rect x="182" y="722" width="46" height="30" rx="6"/>
+      <rect x="258" y="722" width="46" height="30" rx="6"/>
+      <rect x="334" y="722" width="46" height="30" rx="6"/>
+      <rect x="410" y="722" width="46" height="30" rx="6"/>
+      <rect x="486" y="722" width="46" height="30" rx="6"/>
+      <rect x="562" y="722" width="46" height="30" rx="6"/>
+      <rect x="638" y="722" width="46" height="30" rx="6"/>
+      <rect x="714" y="722" width="46" height="30" rx="6"/>
+    </g>
+    <text x="40" y="822" font-size="34" font-weight="700" fill="#faf6ee">CINÉMA DOCUMENTAIRE — 6e ÉDITION</text>
+    <line x1="40" y1="900" x2="760" y2="900" stroke="#faf6ee" stroke-width="3"/>
+    <text x="40" y="948" font-size="22" fill="#faf6ee" opacity="0.7">Affiches · programme · signalétique</text>
+    <text x="760" y="948" font-size="22" fill="#faf6ee" text-anchor="end">N°02</text>
+  </g>
+</svg>

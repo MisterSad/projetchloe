@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Fraunces, Instrument_Sans } from "next/font/google";
+import { Archivo } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
 
-// Polices auto-hébergées au build par next/font — aucune requête vers Google
-const display = Fraunces({
-  variable: "--font-display-var",
-  subsets: ["latin"],
-  axes: ["opsz", "SOFT", "WONK"],
-});
-
-const sans = Instrument_Sans({
+// Grotesque moderne auto-hébergée au build — aucune requête vers Google
+const sans = Archivo({
   variable: "--font-sans-var",
   subsets: ["latin"],
 });
@@ -33,8 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${display.variable} ${sans.variable} antialiased`}>
-      <body>{children}</body>
+    <html lang="fr" className={`${sans.variable} antialiased`}>
+      <body>
+        <SmoothScroll />
+        {children}
+      </body>
     </html>
   );
 }

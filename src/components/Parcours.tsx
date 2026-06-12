@@ -32,61 +32,64 @@ export default function Parcours() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section id="parcours" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-28">
-      <Reveal>
-        <p className="text-sm uppercase tracking-[0.3em] text-muted">Parcours</p>
-        <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight sm:text-6xl">
-          Mon <span className="pr-[0.18em] italic text-accent">chemin</span>jusqu&apos;ici
-        </h2>
-      </Reveal>
+    <section id="parcours" className="scroll-mt-20 bg-warm py-28">
+      <div className="mx-auto max-w-7xl px-6">
+        <Reveal>
+          <h2 className="display max-w-3xl text-[clamp(2.2rem,5.5vw,4.5rem)]">
+            Mon parcours<span className="text-blue">.</span>
+          </h2>
+        </Reveal>
 
-      <div className="relative mt-16 pl-8">
-        {/* Ligne verticale qui se dessine au scroll */}
-        <motion.div
-          aria-hidden
-          className="absolute left-0 top-0 h-full w-px origin-top bg-accent"
-          initial={reduceMotion ? { scaleY: 1 } : { scaleY: 0 }}
-          whileInView={{ scaleY: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.4, ease: [0.21, 0.47, 0.32, 0.98] }}
-        />
+        <div className="relative mt-14 pl-8">
+          {/* Ligne verticale qui se dessine au scroll */}
+          <motion.div
+            aria-hidden
+            className="absolute left-0 top-0 h-full w-px origin-top bg-blue"
+            initial={reduceMotion ? { scaleY: 1 } : { scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+          />
 
-        <ol className="space-y-14">
-          {etapes.map((etape, i) => (
-            <Reveal key={etape.titre} delay={0.2 + i * 0.15}>
-              <li className="relative">
-                <span
-                  aria-hidden
-                  className="absolute -left-[37px] top-2 h-2.5 w-2.5 rounded-full bg-accent"
-                />
-                <p className="text-sm uppercase tracking-widest text-muted">
-                  {etape.periode}
-                </p>
-                <h3 className="mt-2 font-display text-2xl font-medium">
-                  {etape.titre}
-                </h3>
-                <p className="mt-1 text-sm text-accent">{etape.lieu}</p>
-                <p className="mt-3 max-w-xl leading-relaxed text-muted">
-                  {etape.description}
-                </p>
-              </li>
-            </Reveal>
-          ))}
-        </ol>
+          <ol className="space-y-14">
+            {etapes.map((etape, i) => (
+              <Reveal key={etape.titre} delay={0.15 + i * 0.12}>
+                <li className="relative">
+                  <span
+                    aria-hidden
+                    className="absolute -left-[37px] top-2 h-2.5 w-2.5 rounded-full bg-blue"
+                  />
+                  <p className="text-sm font-medium uppercase tracking-widest text-grey-txt">
+                    {etape.periode}
+                  </p>
+                  <h3 className="mt-2 text-2xl font-bold tracking-tight">
+                    {etape.titre}
+                  </h3>
+                  <p className="mt-1 text-sm font-semibold text-blue">
+                    {etape.lieu}
+                  </p>
+                  <p className="mt-3 max-w-xl leading-relaxed text-ink/60">
+                    {etape.description}
+                  </p>
+                </li>
+              </Reveal>
+            ))}
+          </ol>
+        </div>
+
+        <Reveal delay={0.25}>
+          <a
+            href="/cv.pdf"
+            download
+            className="group mt-16 inline-flex items-center gap-3 rounded-full bg-ink px-8 py-4 font-medium text-white transition-colors duration-300 hover:bg-blue"
+          >
+            Télécharger mon CV
+            <span className="transition-transform duration-300 group-hover:translate-y-1">
+              ↓
+            </span>
+          </a>
+        </Reveal>
       </div>
-
-      <Reveal delay={0.3}>
-        <a
-          href="/cv.pdf"
-          download
-          className="group mt-16 inline-flex items-center gap-3 rounded-full bg-accent px-8 py-4 text-paper transition-transform duration-300 hover:scale-105"
-        >
-          Télécharger mon CV
-          <span className="transition-transform duration-300 group-hover:translate-y-1">
-            ↓
-          </span>
-        </a>
-      </Reveal>
     </section>
   );
 }

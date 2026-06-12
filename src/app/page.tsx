@@ -1,9 +1,9 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import Marquee from "@/components/Marquee";
-import About from "@/components/About";
-import Skills from "@/components/Skills";
+import Services from "@/components/Services";
+import Statement from "@/components/Statement";
 import Projects from "@/components/Projects";
+import Atouts from "@/components/Atouts";
 import Parcours from "@/components/Parcours";
 import Footer from "@/components/Footer";
 
@@ -13,10 +13,10 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Marquee />
-        <About />
-        <Skills />
+        <Services />
+        <Statement />
         <Projects />
+        <Atouts />
         <Parcours />
       </main>
       <Footer />

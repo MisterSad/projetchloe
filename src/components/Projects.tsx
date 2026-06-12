@@ -1,28 +1,27 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
+import Image from "next/image";
 import Reveal from "./Reveal";
 
-// Projets de démonstration — remplacer par de vrais visuels dans /public
-// et passer les cartes en <Image> de next/image.
 const projets = [
   {
-    title: "Identité — Café Lumen",
-    category: "Branding",
+    title: "Café Lumen",
+    category: "Identité visuelle & packaging",
     year: "2026",
-    gradient: "from-orange-200 via-rose-200 to-amber-100",
+    image: "/projet-lumen.svg",
   },
   {
-    title: "Affiches — Festival Hors-Champ",
-    category: "Édition",
+    title: "Festival Hors-Champ",
+    category: "Affiches & édition",
     year: "2025",
-    gradient: "from-stone-300 via-zinc-200 to-orange-100",
+    image: "/projet-horschamp.svg",
   },
   {
-    title: "Motion — Studio Particule",
-    category: "Animation",
+    title: "Studio Particule",
+    category: "Motion design",
     year: "2025",
-    gradient: "from-amber-100 via-orange-200 to-stone-200",
+    image: "/projet-particule.svg",
   },
 ];
 
@@ -30,59 +29,49 @@ export default function Projects() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section id="projets" className="scroll-mt-24 bg-ink py-28 text-paper">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="projets" className="scroll-mt-20 bg-cold py-28">
+      <div className="mx-auto max-w-7xl px-6">
         <Reveal>
-          <p className="text-sm uppercase tracking-[0.3em] text-paper/50">
-            Projets sélectionnés
-          </p>
-          <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight sm:text-6xl">
-            Travaux <span className="italic text-accent">récents</span>
-          </h2>
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className="display text-[clamp(2.2rem,5.5vw,4.5rem)]">
+              Projets choisis<span className="text-blue">.</span>
+            </h2>
+            <p className="text-sm uppercase tracking-[0.2em] text-grey-txt">
+              (3) sélectionnés — 2025/26
+            </p>
+          </div>
         </Reveal>
 
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projets.map((projet, i) => (
-            <Reveal key={projet.title} delay={i * 0.12}>
+            <Reveal key={projet.title} delay={i * 0.1}>
               <motion.article
-                whileHover={reduceMotion ? undefined : { y: -8 }}
-                transition={{ duration: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
-                className="group cursor-pointer"
+                whileHover={reduceMotion ? undefined : { y: -10 }}
+                transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                className="group"
               >
-                <div
-                  className={`aspect-[4/5] overflow-hidden rounded-2xl bg-gradient-to-br ${projet.gradient}`}
-                >
-                  <div className="flex h-full w-full items-center justify-center transition-transform duration-700 ease-out group-hover:scale-110">
-                    <span className="font-display text-7xl italic text-ink/20">
-                      ✺
-                    </span>
-                  </div>
+                <div className="overflow-hidden rounded-xl">
+                  <Image
+                    src={projet.image}
+                    alt={`Affiche du projet ${projet.title}`}
+                    width={800}
+                    height={1000}
+                    className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.04] group-hover:rotate-1"
+                  />
                 </div>
-                <div className="mt-5 flex items-baseline justify-between">
+                <div className="mt-4 flex items-baseline justify-between border-b border-line pb-4">
                   <div>
-                    <h3 className="font-display text-xl font-medium">
+                    <h3 className="text-xl font-bold tracking-tight transition-colors group-hover:text-blue">
                       {projet.title}
                     </h3>
-                    <p className="mt-1 text-sm text-paper/50">{projet.category}</p>
+                    <p className="mt-1 text-sm text-ink/55">{projet.category}</p>
                   </div>
-                  <span className="text-sm text-paper/50">{projet.year}</span>
+                  <span className="text-sm text-grey-txt">{projet.year}</span>
                 </div>
               </motion.article>
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.2}>
-          <p className="mt-16 text-center text-paper/50">
-            D&apos;autres projets sur demande —{" "}
-            <a
-              href="#contact"
-              className="text-paper underline decoration-accent underline-offset-4 transition-colors hover:text-accent"
-            >
-              écrivez-moi
-            </a>
-          </p>
-        </Reveal>
       </div>
     </section>
   );

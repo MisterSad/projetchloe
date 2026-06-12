@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, useScroll, useMotionValueEvent } from "motion/react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
+import CopyEmail from "./CopyEmail";
 
 const links = [
   { href: "#competences", label: "Compétences" },
@@ -10,7 +11,7 @@ const links = [
 ];
 
 export default function Nav() {
-  const { scrollYProgress, scrollY } = useScroll();
+  const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -21,43 +22,43 @@ export default function Nav() {
     <motion.header
       initial={{ y: -64, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, delay: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
-        scrolled ? "bg-paper/80 backdrop-blur-md" : "bg-transparent"
+      transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+        scrolled ? "bg-cold/75 backdrop-blur-lg" : "bg-transparent"
       }`}
     >
       <nav
         aria-label="Navigation principale"
-        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
       >
-        <a href="#" className="font-display text-xl font-semibold tracking-tight">
-          Chloé<span className="text-accent">.</span>
+        <a href="#" className="text-lg font-extrabold tracking-tight">
+          Chloé<span className="text-blue">.</span>
         </a>
-        <ul className="hidden items-center gap-8 text-sm sm:flex">
+
+        <ul className="hidden items-center gap-7 text-sm font-medium sm:flex">
           {links.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="group relative text-muted transition-colors hover:text-ink"
+                className="group relative text-ink/70 transition-colors hover:text-ink"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 h-px w-0 bg-blue transition-all duration-300 group-hover:w-full" />
               </a>
             </li>
           ))}
         </ul>
+
+        <div className="hidden md:block">
+          <CopyEmail />
+        </div>
         <a
           href="#contact"
-          className="rounded-full border border-ink px-4 py-1.5 text-sm transition-all duration-300 hover:bg-ink hover:text-paper"
+          className="rounded-full bg-ink px-4 py-1.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-blue md:hidden"
         >
           Contact
         </a>
       </nav>
-      {/* Barre de progression de lecture */}
-      <motion.div
-        className="h-px origin-left bg-accent"
-        style={{ scaleX: scrollYProgress }}
-      />
     </motion.header>
   );
 }

@@ -1,71 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f5f3ee;
-  --ink: #17140f;
-  --muted: #6f6857;
-  --accent: #e8490f;
-  --line: rgba(23, 20, 15, 0.12);
+  /* Trois températures de fond + encre + bleu électrique */
+  --bg-cold: #e9ebf2;
+  --bg-grey: #f4f4f3;
+  --bg-warm: #faf6ee;
+  --ink: #0f0f10;
+  --blue: #2b50ff;
+  --grey: #94908a;
+  --line: rgba(15, 15, 16, 0.1);
 }
 
 @theme inline {
-  --color-paper: var(--paper);
+  --color-cold: var(--bg-cold);
+  --color-grey-bg: var(--bg-grey);
+  --color-warm: var(--bg-warm);
   --color-ink: var(--ink);
-  --color-muted: var(--muted);
-  --color-accent: var(--accent);
+  --color-blue: var(--blue);
+  --color-grey-txt: var(--grey);
   --color-line: var(--line);
   --font-sans: var(--font-sans-var);
-  --font-display: var(--font-display-var);
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Le défilement fluide est géré par Lenis */
+  scroll-behavior: auto;
 }
 
 body {
-  background: var(--paper);
+  background: var(--bg-cold);
   color: var(--ink);
   font-family: var(--font-sans-var), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--paper);
+  background: var(--blue);
+  color: #fff;
 }
 
-/* Grain subtil sur toute la page — cachet « papier » sans coût réseau */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 60;
-  pointer-events: none;
-  opacity: 0.35;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* Défilement du bandeau marquee */
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 28s linear infinite;
+/* Titres : graisse maximale, interlettrage et interlignage très serrés */
+.display {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  .animate-marquee {
-    animation: none;
-  }
   *,
   *::before,
   *::after {
