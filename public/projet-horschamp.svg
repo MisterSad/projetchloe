@@ -43,7 +43,7 @@
       <rect x="638" y="722" width="46" height="30" rx="6"/>
       <rect x="714" y="722" width="46" height="30" rx="6"/>
     </g>
-    <text x="40" y="822" font-size="34" font-weight="700" fill="#faf6ee">CINÉMA DOCUMENTAIRE — 6e ÉDITION</text>
+    <text x="40" y="822" font-size="34" font-weight="700" fill="#faf6ee">CINÉMA DOCUMENTAIRE · 6e ÉDITION</text>
     <line x1="40" y1="900" x2="760" y2="900" stroke="#faf6ee" stroke-width="3"/>
     <text x="40" y="948" font-size="22" fill="#faf6ee" opacity="0.7">Affiches · programme · signalétique</text>
     <text x="760" y="948" font-size="22" fill="#faf6ee" text-anchor="end">N°02</text>

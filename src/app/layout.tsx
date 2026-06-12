@@ -10,11 +10,11 @@ const sans = Archivo({
 });
 
 export const metadata: Metadata = {
-  title: "Chloé — Communication Visuelle",
+  title: "Chloé | Communication Visuelle",
   description:
     "Portfolio de Chloé, étudiante en communication visuelle. Identité de marque, édition, illustration et motion design.",
   openGraph: {
-    title: "Chloé — Communication Visuelle",
+    title: "Chloé | Communication Visuelle",
     description:
       "Portfolio de Chloé, étudiante en communication visuelle. Identité de marque, édition, illustration et motion design.",
     locale: "fr_FR",

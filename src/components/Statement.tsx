@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 // Phrase qui « s'allume » mot après mot au fil du scroll
 const PHRASE =
-  "Un bon design demande du temps, de l'écoute et des choix assumés — c'est exactement ce que j'apporte à chaque projet.";
+  "Un bon design demande du temps, de l'écoute et des choix clairs. C'est ce que je m'applique à faire sur chaque projet.";
 
 function Word({
   children,

@@ -83,7 +83,7 @@ export default function Hero() {
             animate={{ y: 0 }}
             transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           >
-            Portfolio — Communication visuelle
+            Portfolio 2026
           </motion.span>
         </p>
 
@@ -123,11 +123,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.05, ease: [0.16, 1, 0.3, 1] }}
           className="mt-8 max-w-xl text-lg leading-relaxed text-ink/70"
         >
-          Étudiante designer, je passe mes journées à
+          Étudiante en communication visuelle, je passe mes journées à
           <Pill delay={1.3}>dessiner</Pill>
           <Pill delay={1.4}>composer</Pill>et
           <Pill delay={1.5}>animer</Pill>
-          des idées qui font réagir.
+          pour des marques, des festivals et des studios.
         </motion.p>
       </div>
 

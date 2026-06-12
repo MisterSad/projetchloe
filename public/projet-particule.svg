@@ -31,7 +31,7 @@
     </g>
     <!-- Bloc typographique -->
     <text x="62" y="800" font-size="96" font-weight="800" letter-spacing="-3" fill="#faf6ee">PARTICULE</text>
-    <text x="66" y="850" font-size="30" font-weight="600" fill="#2b50ff">STUDIO — MOTION REEL</text>
+    <text x="66" y="850" font-size="30" font-weight="600" fill="#2b50ff">STUDIO DE MOTION DESIGN</text>
     <line x1="62" y1="886" x2="738" y2="886" stroke="#faf6ee" stroke-width="3"/>
     <text x="62" y="936" font-size="22" fill="#94908a">Animation de logo · habillage · reel 30s</text>
     <text x="738" y="936" font-size="22" fill="#faf6ee" text-anchor="end">N°03</text>

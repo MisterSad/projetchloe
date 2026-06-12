@@ -6,7 +6,7 @@ import Reveal from "./Reveal";
 // Parcours de démonstration — à remplacer par les vraies étapes.
 const etapes = [
   {
-    periode: "2024 — aujourd'hui",
+    periode: "Depuis 2024",
     titre: "Bachelor Communication Visuelle",
     lieu: "École supérieure de design",
     description:
@@ -14,13 +14,13 @@ const etapes = [
   },
   {
     periode: "Été 2025",
-    titre: "Stage — Studio de création",
+    titre: "Stage en studio de création",
     lieu: "Agence indépendante",
     description:
       "Déclinaisons d'identités visuelles, préparation de fichiers d'exécution, participation aux présentations clients.",
   },
   {
-    periode: "2023 — 2024",
+    periode: "2023-2024",
     titre: "Année préparatoire en arts appliqués",
     lieu: "Atelier préparatoire",
     description:

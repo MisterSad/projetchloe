@@ -6,22 +6,22 @@ const atouts = [
   {
     titre: "Un regard neuf",
     texte:
-      "Une direction visuelle singulière, nourrie par la culture graphique d'aujourd'hui.",
+      "Une culture graphique récente et l'envie de proposer autre chose que ce qui se fait déjà.",
   },
   {
     titre: "Le souci du détail",
     texte:
-      "Du premier croquis au fichier d'exécution, chaque pixel et chaque approche typographique comptent.",
+      "Du premier croquis au fichier d'exécution, je soigne chaque étape du travail.",
   },
   {
-    titre: "Des systèmes, pas des one-shots",
+    titre: "Des chartes qui durent",
     texte:
-      "Des chartes pensées pour durer et rester cohérentes sur tous vos supports.",
+      "Des systèmes graphiques pensés pour rester cohérents sur tous vos supports.",
   },
   {
     titre: "L'écoute avant tout",
     texte:
-      "Vos objectifs guident mes choix de design — pas l'inverse.",
+      "Je commence par comprendre vos objectifs avant de proposer des pistes.",
   },
 ];
 

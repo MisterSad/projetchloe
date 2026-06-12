@@ -42,14 +42,14 @@ export default function Footer() {
         </p>
 
         <h2 className="display mt-6 text-[clamp(2.6rem,7.5vw,6.5rem)]">
-          <LineReveal delay={0}>Construisons quelque</LineReveal>
-          <LineReveal delay={0.12}>chose de mémorable.</LineReveal>
+          <LineReveal delay={0}>Un projet, un stage,</LineReveal>
+          <LineReveal delay={0.12}>une idée ? Parlons-en.</LineReveal>
         </h2>
 
         <Reveal delay={0.25}>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/75">
-            Stage, alternance ou projet freelance — je réponds vite et toujours
-            avec des idées.
+            Je cherche un stage ou une alternance pour 2026. Écrivez-moi, je
+            réponds vite.
           </p>
         </Reveal>
 
@@ -94,7 +94,7 @@ export default function Footer() {
               © {new Date().getFullYear()}
             </p>
             <p className="mt-4 text-white/80">
-              Chloé — Communication visuelle
+              Chloé, communication visuelle
               <br />
               Tous droits réservés
             </p>

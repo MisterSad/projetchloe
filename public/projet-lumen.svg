@@ -26,7 +26,7 @@
     </g>
     <!-- Bloc typographique -->
     <text x="62" y="800" font-size="118" font-weight="800" letter-spacing="-4" fill="#0f0f10">LUMEN</text>
-    <text x="66" y="852" font-size="30" font-weight="600" fill="#2b50ff">CAFÉ — TORRÉFACTEUR</text>
+    <text x="66" y="852" font-size="30" font-weight="600" fill="#2b50ff">CAFÉ &amp; TORRÉFACTEUR</text>
     <line x1="62" y1="886" x2="738" y2="886" stroke="#0f0f10" stroke-width="3"/>
     <text x="62" y="936" font-size="22" fill="#94908a">Identité visuelle · packaging · signalétique</text>
     <text x="738" y="936" font-size="22" fill="#0f0f10" text-anchor="end">N°01</text>

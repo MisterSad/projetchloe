@@ -7,22 +7,22 @@ const services = [
   {
     title: "Identité de marque",
     description:
-      "Logotypes, chartes graphiques et déclinaisons print & digital qui donnent un visage cohérent à votre projet.",
+      "Logotypes, chartes graphiques et déclinaisons print et digital.",
   },
   {
     title: "Design éditorial",
     description:
-      "Affiches, brochures et systèmes typographiques pensés pour être lus — et remarqués.",
+      "Affiches, brochures, mise en page et systèmes typographiques.",
   },
   {
     title: "Motion design",
     description:
-      "Animations de logo, vidéos courtes et habillages réseaux sociaux qui donnent vie à votre image.",
+      "Animations de logo, vidéos courtes et habillages pour les réseaux sociaux.",
   },
   {
     title: "Illustration",
     description:
-      "Univers visuels sur mesure, pictogrammes et illustrations vectorielles à forte personnalité.",
+      "Illustrations vectorielles, pictogrammes et univers visuels sur mesure.",
   },
 ];
 

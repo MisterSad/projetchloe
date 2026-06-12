@@ -37,7 +37,7 @@ export default function Projects() {
               Projets choisis<span className="text-blue">.</span>
             </h2>
             <p className="text-sm uppercase tracking-[0.2em] text-grey-txt">
-              (3) sélectionnés — 2025/26
+              Sélection 2025-2026
             </p>
           </div>
         </Reveal>
